@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock Show</title>
+
+  <!-- CSS STYLE LINK -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header>
+      <h1>My Clock</h1>
+
+      <div class="theme">
+        <select name="theme" id="theme">
+          <option value="select theme">Select Theme</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+          <option value="dracula">Dracula</option>
+        </select>
+      </div>
+
+      <div class="switch-clock">
+        <div class="switch-analog">Analog</div>
+        <div class="switch"></div>
+        <div class="switch-digital">Digital</div>
+      </div>
+    </header>
+
+    <!-- ANALOG CLOCK -->
+    <section class="analog-clock">
+      <div class="outermost-border">
+        <div class="second-border">
+          <div class="number-border">
+
+            <div class="seconds-hand">
+              <div class="hand"></div>
+              <div class="extension"></div>
+            </div>
+
+            <div class="minutes-hand">
+              <div class="hand"></div>
+              <div class="extension"></div>
+            </div>
+
+            <div class="hours-hand">
+              <div class="hand"></div>
+              <div class="extension"></div>
+            </div>
+
+            <p class="num twelve">12</p>
+            <p class="num one">1</p>
+            <p class="num two">2</p>
+            <p class="num three">3</p>
+            <p class="num four">4</p>
+            <p class="num five">5</p>
+            <p class="num six">6</p>
+            <p class="num seven">7</p>
+            <p class="num eight">8</p>
+            <p class="num nine">9</p>
+            <p class="num ten">10</p>
+            <p class="num eleven">11</p>
+            <div class="hand-border">
+              <div class="innermost-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF ANALOG CLOCK -->
+
+    <!-- DIGITAL CLOCK -->
+    <section class="digital-clock">
+      <div class="hours">00</div>
+      <div class="separator">:</div>
+      <div class="minutes">00</div>
+      <div class="separator">:</div>
+      <div class="seconds">00</div>
+      <div class="ap-pm">am</div>
+    </section>
+    <!-- END OF DIGITAL CLOCK -->
+
+  </main>
+
+
+  <!-- JAVASCRIPT LINK -->
+  <script src="./main.js"></script>
+</body>
+
+</html>

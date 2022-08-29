@@ -1,0 +1,330 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --outermostBorder: 80vw;
+
+  /* COLOURS */
+  --clockBackground: #ffabff;
+  --clockBorder: #c01be9;
+  --edgeClockBorder: #810a9e;
+  --secondsHand: #fa0505;
+  --minutesHand: #0330f7;
+  --hoursHand: #0330f7;
+}
+/* END OF VARIABLES */
+
+/* HEADER STYLES */
+
+header {
+  background-color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.switch-clock {
+  /* background-color: green; */
+  width: 150px;
+  height: 40px;
+  display: flex;
+  border-radius: 7px;
+  border: 2px solid green;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.switch-analog,
+.switch-digital {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  font-weight: 900;
+}
+
+.switch-analog {
+  border-radius: 5px;
+  color: white;
+}
+
+.switch-digital {
+  color: blue;
+}
+
+.theme select {
+  width: 150px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.theme select:focus {
+  outline: none;
+}
+
+.theme select option {
+  padding: 20px;
+  background-color: blue;
+  color: white;
+  line-height: 20px;
+}
+
+/* END OF HEADER STYLES */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ANALOG CLOCK STYLES */
+.analog-clock {
+  width: 100%;
+  height: 80%;
+  background-color: red;
+  position: relative;
+  display: flex;
+}
+
+.outermost-border {
+  width: var(--outermostBorder);
+  height: var(--outermostBorder);
+  background-color: var(--edgeClockBorder);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 10px var(--clockBorder);
+  /* box-shadow: 1px 1px 3px black; */
+}
+
+.second-border {
+  width: 97%;
+  height: 97%;
+  border: solid 2px var(--edgeClockBorder);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+  background: var(--clockBackground);
+}
+
+.number-border {
+  width: 90%;
+  height: 90%;
+  border: solid 2px var(--clockBorder);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.num {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.twelve {
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  width: fit-content;
+}
+
+.one {
+  top: 25px;
+  right: 80px;
+}
+
+.two {
+  top: 80px;
+  right: 25px;
+}
+
+.three {
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+}
+
+.four {
+  bottom: 80px;
+  right: 25px;
+}
+
+.five {
+  bottom: 25px;
+  right: 80px;
+}
+
+.six {
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  width: fit-content;
+}
+
+.seven {
+  bottom: 25px;
+  left: 80px;
+}
+
+.eight {
+  bottom: 80px;
+  left: 25px;
+}
+
+.nine {
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+}
+
+.ten {
+  top: 80px;
+  left: 25px;
+}
+
+.eleven {
+  top: 25px;
+  left: 80px;
+}
+
+.hand-border {
+  width: 10%;
+  height: 10%;
+  border: solid 2px var(--clockBorder);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.innermost-border {
+  width: 90%;
+  height: 90%;
+  border: solid 2px var(--clockBorder);
+  background-color: var(--edgeClockBorder);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.seconds-hand {
+  width: 2px;
+  height: 95%;
+  background: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(0deg);
+  /* transition: all 0.2s linear; */
+}
+
+.seconds-hand .hand {
+  width: 100%;
+  height: 50%;
+  background-color: var(--secondsHand);
+}
+
+.minutes-hand {
+  width: 5px;
+  height: 90%;
+  background: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(0deg);
+  /* transition: all 0.2s linear; */
+}
+
+.minutes-hand .hand {
+  width: 100%;
+  height: 50%;
+  background-color: var(--minutesHand);
+  border-radius: 50% 50% 0 0;
+}
+
+.hours-hand {
+  width: 7px;
+  height: 70%;
+  background: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(0deg);
+  /* transition: all 0.2s linear; */
+}
+
+.hours-hand .hand {
+  /* border: solid red 1px; */
+  width: 100%;
+  height: 50%;
+  background-color: var(--minutesHand);
+  border-radius: 50% 50% 0 0;
+}
+/* END OF ANALOG CLOCK STYLES */
+
+/* DIGITAL CLOCK STYLES */
+.digital-clock {
+  width: 100%;
+  height: 80vh;
+  background-color: red;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: 900;
+}
+/* END DIGITAL CLOCK STYLES */
